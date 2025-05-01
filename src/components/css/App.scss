@@ -1,0 +1,30 @@
+#root {
+    font-family: 'src/assets/fonts/PlusJakartaSans-Italic-VariableFont_wght.ttf';
+    margin: 0 auto;
+    width: 75%;
+}
+main {
+    background-color: #fff;
+    display: flex;
+    justify-content: space-evenly;
+    margin: 0 auto;
+    overflow: hidden;
+    @media (max-width:910px) {
+        flex-direction: column;
+    }
+    div.wrapper {
+        width: 50%;
+        @media (max-width:910px) {
+            width: 100%;
+        }
+    }
+    section {
+        h1 {
+            font-size: 30px;
+            margin: 0;
+        }
+        label {
+            font-size: 18px;
+        }
+    }
+}

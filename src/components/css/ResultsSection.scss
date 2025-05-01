@@ -1,0 +1,50 @@
+section.results-section {
+    background-color: hsl(202, 55%, 16%);
+    box-sizing: border-box;
+    border-bottom-left-radius: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    padding: 30px;
+    width: 100%;
+    @media (max-width:910px) {
+        border-bottom-left-radius: 0;
+    }
+    img {
+        max-width: 400px;
+        margin: 0 auto;
+    }
+    p {
+        color: #b0c2e7;
+        font-size: 18px;
+        text-align: center;
+    }
+    h2 {
+        font-size: 24px;
+        margin: 0;
+    }
+    div.results-div {
+        background-color: #2b2b2b;
+        border-radius: 4px;
+        border-top: 3px solid yellowgreen;
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+        margin-bottom: 30px;
+        width: 80%;
+        span.monthly-repayments {
+            color: yellowgreen;
+            font-size: 60px;
+            margin-bottom: 20px;
+        }
+        div.divider {
+            border-bottom: 1px solid #ccc;
+            margin: 20px 0 30px 0;
+        }
+        span.total {
+            font-size: 35px;
+        }
+    }
+}

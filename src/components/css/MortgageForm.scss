@@ -1,0 +1,149 @@
+section.calculation-section {
+    color: #333;
+    height: 100%;
+    padding: 30px;
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 20px;
+        h1 {
+            @media (max-width:1090px) {
+                width: 150px;   
+            }
+        }
+        .clear-all {
+            background-color: #fff;
+            border-bottom: 1px solid #333;
+            border-radius: 0%;
+            color: #333;
+            font-size: 16px;
+            padding: 0;
+            padding-bottom: 2px;
+            cursor: pointer;
+            &:hover {
+                background-color: #eee;
+                border-top: 1px solid #eee;
+                border-left: 1px solid #eee;
+                border-right: 1px solid #eee;
+            }
+        }
+    }
+    form {
+        display: grid;
+        grid-template-rows: auto;
+        .error {
+            color: red;
+            margin-top: 5px;
+        }
+        label {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 20px;
+        }
+        input {
+            font-size: 18px;
+            max-width: 100%;
+        }
+        input[type=number] {
+            background-color: #fff;
+            border: 1px solid #555;
+            border-radius: 10px;
+            color: #333;
+            padding: 8px;
+            margin-top: 5px;
+            transition: border 0.2s ease;
+            &:hover {
+                border: 1px solid yellowgreen;
+            }
+            &:focus {
+                border: 1px solid yellowgreen;
+                outline: none;
+            }
+        }
+        // remove button spinners on number inputs
+        input[type=number]::-webkit-inner-spin-button,
+        input[type=number]::-webkit-outer-spin-button {
+            -webkit-appearance: none;
+        }
+        input[type=number] {
+            appearance: none;
+            -moz-appearance: textfield;
+        }
+        div.term-and-rate {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            @media (max-width:1550px) {
+                grid-template-columns: 1fr;
+                gap: 0;
+            }
+        }
+        div.mortgage-type {
+            margin-bottom: 20px;
+            .mortgage-type-label {
+                font-size: 18px;
+                margin-bottom: 5px;
+                margin-top: 0;
+            }
+            label {
+                display: inline;
+            }
+            .radio-div {
+                border: 1px solid #333;
+                padding: 10px;
+                margin-bottom: 5px;
+                &:checked {
+                    background-color: rgb(179, 204, 128);
+                }
+            }
+            .custom-radio {
+                appearance: none;
+                -webkit-appearance: none;
+                background-color: #333;
+                border: 1px solid #333;
+                border-radius: 50%;
+                width: 10px;
+                height: 10px;
+                padding: 5px;
+                position: relative;
+                cursor: pointer;
+                &:checked {
+                    background-color: yellowgreen;
+                    border: 1px solid yellowgreen;
+                }
+                &:focus {
+                    border: none;
+                }
+            }
+            label.radio-text {
+                margin-left: 10px;
+            }
+            span {
+                font-size: 18px;
+            }
+        }
+        div.mortgage-type:hover div.radio-div,
+        div.mortgage-type:hover input[type=radio] {
+            border: 1px solid rgb(101, 129, 44);
+        }
+        div.mortgage-type div.radio-div,
+        div.mortgage-type input[type=radio] {
+            transition: all 0.2s ease;
+        }
+        .submit {
+            background-color: #333;
+            border: 1px solid #333;
+            border-radius: 4px;
+            font-family: 'src/assets/fonts/PlusJakartaSans-Italic-VariableFont_wght.ttf';
+            padding: 10px 0 10px;
+            transition: background-color 0.2s ease;
+            &:hover {
+                background-color: yellowgreen;
+                border: 1px solid yellowgreen;
+                color: #333;
+            }
+        }
+    }
+}
+
