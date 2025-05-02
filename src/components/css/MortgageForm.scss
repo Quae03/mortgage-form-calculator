@@ -136,12 +136,23 @@ section.calculation-section {
             border: 1px solid #333;
             border-radius: 4px;
             font-family: 'src/assets/fonts/PlusJakartaSans-Italic-VariableFont_wght.ttf';
+            font-size: 18px;
             padding: 10px 0 10px;
             transition: background-color 0.2s ease;
-            &:hover {
+            img {
+                display: none;
+                position: relative;
+                top: 5px;
+            }
+            &:hover,
+            &:focus {
                 background-color: yellowgreen;
                 border: 1px solid yellowgreen;
                 color: #333;
+            }
+            &:hover img, 
+            &:focus img {
+                display: inline;
             }
         }
     }

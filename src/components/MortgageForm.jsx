@@ -1,4 +1,5 @@
 import './css/MortgageForm.scss';
+import image from '../assets/images/icon-calculator.svg';
 import { useContext } from 'react';
 import { useRef } from 'react';
 import { ParameterContext } from './ParameterContext';
@@ -15,7 +16,7 @@ function MortgageForm() {
     const {setIsRepayment} = useContext(ParameterContext);
     const {setIsInterestOnly} = useContext(ParameterContext);
 
-    const {isValid, setIsValid} = useContext(ParameterContext);
+    let {isValid, setIsValid} = useContext(ParameterContext);
 
     // input refs & error refs
     const formRef = useRef();
@@ -122,10 +123,6 @@ function MortgageForm() {
         }
     }
 
-    function handleAllRadioChanges() {
-        styleRadioDiv;
-    }
-
     return (
         <>
         <div className='wrapper'>
@@ -221,7 +218,10 @@ function MortgageForm() {
                         <span ref={radioErrorRef} id='radioError' className='error'></span>
                     </div>
 
-                    <input className='submit' ref={submitRef} type="submit" value='Calculate Repayments' />
+                    <button className='submit' ref={submitRef}>
+                        <img src={image} alt="calculator image" />
+                        Calculate Repayments
+                    </button>
                 </form>
             </section>
         </div>
