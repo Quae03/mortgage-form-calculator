@@ -97,7 +97,7 @@ function MortgageForm() {
         radioDiv2Ref.current.style.border = '1px solid #333';
         radio1Ref.current.checked = false;
         radio2Ref.current.checked = false;
-        isValid ? isValid = false : '';
+        isValid ? setIsValid(false) : '';
     }
 
     function styleRadioDiv() {
