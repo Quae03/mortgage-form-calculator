@@ -4,7 +4,6 @@ import './css/ResultsSection.scss';
 // component for calculating and storing mortgage calculation
 export function DisplayEmpty() {
     return (
-        <div className='wrapper'>
             <section className='results-section'>
                 <img src={image} alt="no results image" />
                 <h2>Your results will be shown here</h2>
@@ -13,7 +12,6 @@ export function DisplayEmpty() {
                 To adjust the results, edit the form and click the “calculate repayments” button again.
                 </p>
             </section>
-        </div>
     );
 }
 
